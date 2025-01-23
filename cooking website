@@ -17,18 +17,25 @@ This is the Lab 1 page for Web Development - Fundamentals (INFT1206-04)
             background-color: cyan;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
         }
         header {
-            padding: 20px;
             background-color: #f4a261;
             color: white;
+            padding: 20px;
         }
-        header h1 {
-            margin-bottom: 10px;
+        .tabs {
+            background-color: #2a9d8f;
+            padding: 10px;
+        }
+        .tabs button {
+            background-color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
         }
         .recipe {
+            display: none;
             border: 1px solid #000;
             padding: 20px;
             margin: 20px auto;
@@ -37,32 +44,42 @@ This is the Lab 1 page for Web Development - Fundamentals (INFT1206-04)
             max-width: 600px;
             text-align: left;
         }
-        .recipe img {
-            display: block;
-            margin: 0 auto 10px;
-            width: 100%;
-            max-width: 200px;
-        }
         footer {
-            padding: 20px;
             background-color: #2a9d8f;
             color: white;
-            margin-top: 20px;
+            padding: 20px;
         }
     </style>
+    <script>
+        function showTab(tabId) {
+            var recipes = document.getElementsByClassName('recipe');
+            for (var i = 0; i < recipes.length; i++) {
+                recipes[i].style.display = 'none';
+            }
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        window.onload = function() {
+            showTab('spaghetti'); // Show the first recipe by default
+        };
+    </script>
 </head>
 <body>
 
-    <!-- Page Header -->
     <header>
         <h1>Tasty Treasures</h1>
         <p>Delicious recipes to try in your kitchen!</p>
     </header>
 
-    <!-- Spaghetti Bolognese Recipe -->
-    <article class="recipe">
+    <div class="tabs">
+        <button onclick="showTab('spaghetti')">Spaghetti Bolognese</button>
+        <button onclick="showTab('chicken')">Chicken Curry</button>
+        <button onclick="showTab('pancakes')">Fluffy Pancakes</button>
+    </div>
+
+    <div id="spaghetti" class="recipe">
         <h2>Spaghetti Bolognese</h2>
-        <img src="spaghetti.jpeg" alt="Spaghetti Bolognese">
+        <img src="spaghetti.jpeg" alt="Spaghetti Bolognese" style="width:100px;">
         <h3>Ingredients</h3>
         <ul>
             <li>200g of spaghetti</li>
@@ -76,69 +93,70 @@ This is the Lab 1 page for Web Development - Fundamentals (INFT1206-04)
         </ul>
         <h3>Instructions</h3>
         <ol>
-            <li>Cook the spaghetti according to package instructions.</li>
-            <li>Heat oil, then sauté onion and garlic.</li>
+            <li>Cook spaghetti according to package instructions.</li>
+            <li>Heat oil, sauté onion and garlic.</li>
             <li>Add beef and cook until browned.</li>
-            <li>Add tomatoes, simmer for 10 minutes, and season.</li>
-            <li>Drain spaghetti and mix with sauce. Serve!</li>
+            <li>Add tomatoes, simmer for 10 minutes.</li>
+            <li>Mix spaghetti with sauce and serve.</li>
         </ol>
-    </article>
+    </div>
 
-    <!-- Chicken Curry Recipe -->
-    <article class="recipe">
+    <div id="chicken" class="recipe">
         <h2>Chicken Curry</h2>
-        <img src="chicken.jpeg" alt="Chicken Curry">
+        <img src="chicken.jpeg" alt="Chicken Curry" style="width:100px;">
         <h3>Ingredients</h3>
         <ul>
-            <li>500g of chicken breast, cut into chunks</li>
+            <li>500g of chicken breast</li>
             <li>1 onion, chopped</li>
             <li>2 cloves of garlic, minced</li>
             <li>1 tablespoon of curry powder</li>
-            <li>1 can of coconut milk (400ml)</li>
+            <li>1 can of coconut milk</li>
             <li>1 tablespoon of olive oil</li>
             <li>Salt and pepper to taste</li>
-            <li>Fresh cilantro for garnish</li>
         </ul>
         <h3>Instructions</h3>
         <ol>
             <li>Heat oil, cook onion and garlic.</li>
             <li>Add chicken, cook until browned.</li>
-            <li>Sprinkle curry powder, stir to coat.</li>
-            <li>Add coconut milk and simmer for 15-20 minutes.</li>
-            <li>Season, garnish with cilantro, and serve.</li>
+            <li>Add curry powder, stir.</li>
+            <li>Add coconut milk and simmer.</li>
+            <li>Season and serve.</li>
         </ol>
-    </article>
+    </div>
 
-    <!-- Pancakes Recipe -->
-    <article class="recipe">
+    <div id="pancakes" class="recipe">
         <h2>Fluffy Pancakes</h2>
-        <img src="fluffy.jpeg" alt="Fluffy Pancakes">
+        <img src="fluffy.jpeg" alt="Fluffy Pancakes" style="width:100px;">
         <h3>Ingredients</h3>
         <ul>
-            <li>1 cup all-purpose flour</li>
+            <li>1 cup flour</li>
             <li>2 tablespoons sugar</li>
             <li>2 teaspoons baking powder</li>
             <li>1/2 teaspoon salt</li>
             <li>1 cup milk</li>
             <li>1 egg</li>
             <li>2 tablespoons melted butter</li>
-            <li>Maple syrup for serving</li>
         </ul>
         <h3>Instructions</h3>
         <ol>
             <li>Mix flour, sugar, baking powder, and salt.</li>
-            <li>In another bowl, whisk milk, egg, and butter.</li>
-            <li>Combine wet and dry ingredients (don’t overmix).</li>
-            <li>Cook on a heated pan until golden on both sides.</li>
-            <li>Serve with maple syrup or favorite toppings.</li>
+            <li>In another bowl, mix milk, egg, and butter.</li>
+            <li>Combine wet and dry ingredients.</li>
+            <li>Cook on a pan until golden.</li>
+            <li>Serve with syrup.</li>
         </ol>
-    </article>
+    </div>
 
-    <!-- Page Footer -->
     <footer>
         <p>Happy Cooking! &copy; 2025 Karthikraja Ganesan</p>
     </footer>
 
 </body>
 </html>
+       
+        
+   
 
+   
+
+   
