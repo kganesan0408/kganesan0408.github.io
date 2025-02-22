@@ -1,0 +1,116 @@
+/* 
+    Name: karthikraja ganesan
+    File: homepage.css
+    Date: 22 February 2025
+    A stylesheet for the Durham Collage homepage with advanced text styling.
+*/
+/* Global Styles */
+html {
+    font-size: 10px; /* Base size for rem calculations */
+    font-family: 'Merriweather', serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+/* Bulletproof @font-face for body font */
+@font-face {
+    font-family: 'Merriweather';
+    src: url('Merriweather-Regular.eot');
+    src: url('Merriweather-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Merriweather-Regular.woff2') format('woff2'),
+         url('Merriweather-Regular.woff') format('woff'),
+         url('Merriweather-Regular.ttf') format('truetype'),
+         url('Merriweather-Regular.svg#Merriweather') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Bulletproof @font-face for heading font */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.eot');
+    src: url('RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),
+         url('RobotoSlab-Regular.woff2') format('woff2'),
+         url('RobotoSlab-Regular.woff') format('woff'),
+         url('RobotoSlab-Regular.ttf') format('truetype'),
+         url('RobotoSlab-Regular.svg#RobotoSlab') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', sans-serif;
+    letter-spacing: 0.1em;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+h2 {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+/* Paragraphs */
+p {
+    margin: 1.2rem 0;
+    text-indent: 2rem;
+}
+/* Links styling */
+a {
+    text-decoration: underline;
+    outline: none;
+    color: #0066cc;
+}
+a:visited {
+    color: #2a7;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+a:active {
+    color: red;
+}
+a.external:after {
+    content: url('external-link-icon.png');
+    margin-left: 0.2em;
+}
+/* Lists */
+ul, ol {
+    margin: 1.2rem 0;
+    padding-left: 2rem;
+}
+li {
+    line-height: 1.5;
+    list-style-type: disc;
+}
+/* Navigation */
+nav {
+    width: 200px;
+    background: #ccc;
+    padding: 1rem;
+    margin: 1rem;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin-bottom: 1rem;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    background: #eee;
+}
+nav a:hover,
+nav a:focus {
+    background: #ddd;
+}

@@ -1,0 +1,82 @@
+/* 
+    Name: karthikraja ganesan
+    File: layout.css
+    Date: 22 February 2025
+    A stylesheet for the Durham Collage layout page.
+*/
+/* Reset */
+body, h1, h2, p, ul, li, article, aside, nav, header, footer, section {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* Header */
+header {
+    background: #444;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+/* Sticky Navigation */
+nav {
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Two-column content layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+article {
+    flex: 2;
+    padding: 1rem;
+}
+aside {
+    flex: 1;
+    padding: 1rem;
+    background: #f4f4f4;
+}
+/* Blog image styling with text wrap */
+article img {
+    float: left;
+    margin-right: 1rem;
+    width: 200px;
+}
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Gallery grid: two columns with 1px gap */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+}
+.gallery img {
+    width: 100%;
+    display: block;
+}
+/* Footer */
+footer {
+    background: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}

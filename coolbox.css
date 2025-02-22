@@ -1,0 +1,27 @@
+/* 
+    Name: karthikraja ganesan
+    File: coolbox.css
+    Date: 22 February 2025
+    A stylesheet for the cool looking box challenge.
+*/
+html {
+    font-family: sans-serif;
+}
+.cool-box {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem; /* ~18px if base is 16px */
+    /* Linear gradient to top left: fully transparent at 0%, ~0.2 opacity by 30% */
+    background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.2) 100%), #3498db;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 8px;
+    border: 1px solid #2980b9;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3), 
+                inset 2px 2px 4px rgba(255,255,255,0.5),
+                inset -2px -2px 4px rgba(0,0,0,0.5);
+}

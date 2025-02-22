@@ -1,0 +1,40 @@
+/* 
+    Name: karthikraja ganesan
+    File: biography.css
+    Date: 22 February 2025
+    A stylesheet for the biography page of karthikraja ganesan.
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    color: hotpink;
+    font-size: 2em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 10px dotted purple;
+    padding-bottom: 5px;
+}
+h2 {
+    font-size: 1.5em;
+    font-style: italic;
+}
+.job-title {
+    color: #666;
+    font-weight: bold;
+}
+ul {
+    background-color: #eeeeee;
+    border: 5px solid purple;
+    padding: 10px;
+    list-style-type: none;
+}
+a:link,
+a:visited {
+    color: #fb6542;
+    text-decoration: none;
+}
+a:hover {
+    color: green;
+    text-decoration: none;
+}
